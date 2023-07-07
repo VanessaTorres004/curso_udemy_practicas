@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+//Se desea realizar un programa que almacene la información de un motor de combustión interna y posteriormente muestre la clindrada de dicho motor en CV. 
+//La información del motor se almacenar en una estructura con los siguientes miembros y tipos de datos:
+	//• Identificador del motor valor numérico que identica el motor de forma única? cilindro estructura de datos anidads
+//• Nimero de cilindros: número entero que indica el número de clindros del motor? cilindrada número real que se calcular en el programa
+	//A su vez cilindro será una estructura aridada que conste de los siguientes miembros:
+	//? Diámetro número real (en millimetros)
+	//? Carrera número real (en milimetros)
+	//Las información del cilindro se almacenar en millimetros. B programa pedirá los datos del motor al usuario y calcular la cilindrada, que almacenant en la misma estructura de datos, begún la siguiente forma
+int main()
+{
+    struct cilindro{//
+        float diametro;
+        float carrera;
+    };
+
+    struct motor{
+        int identificador;
+        struct cilindro cilindro1;//de laotra estructura
+        int num_cilindros;
+        float cilindrada;
+    };
+
+    struct motor motor1;
+
+    printf("Introduce el identificador\n");
+    scanf("%d",&motor1.identificador);//lo guarda en que estructura y en que dato
+    printf("Introduce el diametro del cilindro(mm)\n");
+    scanf("%f",&motor1.cilindro1.diametro);
+    printf("Introduce la carrera del cilindro(mm)\n");
+    scanf("%f",&motor1.cilindro1.carrera);
+    printf("Introduce el numero de cilindros\n");
+    scanf("%d",&motor1.num_cilindros);
+
+    motor1.cilindrada = (motor1.num_cilindros*(motor1.cilindro1.carrera/10)*M_PI*pow((motor1.cilindro1.diametro/10),2))/4;//al cuadrado
+
+    printf("Identificador: %d\n",motor1.identificador);
+    printf("Diametro(mm): %.2f\n", motor1.cilindro1.diametro);
+    printf("Carrera(mm): %.2f\n",motor1.cilindro1.carrera);
+    printf("No cilindros: %d\n",motor1.num_cilindros);
+    printf("Cilindrada: %.2f\n",motor1.cilindrada);
+
+
+}
