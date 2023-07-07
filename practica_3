@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Escribe un programa que pida al usuario el valor de la base y la altura de un rectángulo y con ellos calcule su área. A = b xh
+int main()
+{
+    float base,altura;//decimales
+    printf("Introduzca la base del rectangulo\n");
+    scanf("%f",&base);
+    printf("Introduzca la altura del rectangulo\n");
+    scanf("%f",&altura);
+    float area = base * altura;
+
+    printf("El area del rectangulo de base %.2f y altura %.2f es: %.2f",base,altura,area);
+}
